@@ -1,0 +1,21 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-12">
+			<div class="progress" style="height: 7px">
+				<div class="progress-bar progress-bar-striped progress-bar-animated border border-dark" style="height: 7px; width: 10%"></div>
+			</div>
+		</div>
+		<div class="col-12">
+			<div class="d-flex mx-auto justify-content-center p-2 border border-secondary rounded shadow mb-2 text-white" [ngStyle]="myStyles">
+				<button (click)="onRefresh()" type="button" class="btn btn-sm btn-default border"><img src="assets/icon/refresh.png" alt="refresh" width="30px" height="30px"></button>
+    			<button type="button" (click)="onStop()" class="btn btn-sm border"><img src="assets/icon/stop.png" alt="stop" width="30px" height="30px"></button>
+    			<button (click)="onRewind()" type="button" class="btn btn-sm btn-default m-1 "><img src="assets/icon/rewind.png" alt="rewind" width="40px" height="40px"></button>
+
+    			<button type="button" (click)="onPlay('song')" class="btn btn-sm m-1" id="pla"><img src="assets/icon/play.png" alt="play" width="50px" height="50px"></button>
+    			<button type="button" (click)="onPause('song')" class="btn btn-sm m-1" id="pau"><img src="assets/icon/pause.png" alt="pause" width="50px" height="50px"></button>
+    			<button type="button" (click)="onForward()" class="btn btn-sm m-1" id="forwarder" ><img src="assets/icon/forward.png" alt="forward" width="40px" height="40px"></button>
+    			
+			</div>
+		</div>
+	</div> 
+</div> 

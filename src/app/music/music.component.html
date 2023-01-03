@@ -1,0 +1,50 @@
+<div class="container-fluid">
+	<div class="container-fluid" style="height:63vh; overflow: scroll; overflow-x: hidden;">
+		<table class="table table-bordered table-striped table-hover">
+			<thead class="thead-dark">
+				<tr>
+					<th>Album</th>
+					<th>Title</th>
+					<th>Length</th>
+					<th>Rating</th>
+				</tr>
+			</thead>
+			<tbody  class="tbody-dark">
+				<tr *ngFor="let song of music">
+					<td [class.selected]="song" (click)="playMusic(song)">{{song.name}}</td>
+					<td>{{song.title}}</td>
+					<td>{{song.length}}</td>
+					<td>{{song.rating}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="container-fluid" style="position: absolute; left: -100px">
+		<div class="mx-auto">
+			<div class="row">
+				<div class="col-12">
+					<div class="progress mb-2" style="height: 7px" >
+						<div class="progress-bar progress-bar-striped progress-bar-animated border border-dark" style="height: 7px; width: 10%"></div>
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="p-2 border border-secondary rounded shadow mb-2" [ngStyle]="myStyles">
+
+						<button (click)="onRefresh()" type="button" class="btn btn-sm btn-default border"><img src="assets/icon/refresh.png" alt="Terminal View: Open Bashrefresh" width="30px" height="30px"></button>
+
+		    			<button type="button" (click)="onStop()" class="btn btn-sm border"><img src="assets/icon/stop.png" alt="stop" width="30px" height="30px"></button>
+
+		    			<button (click)="onRewind()" type="button" class="btn btn-sm btn-default m-1 "><img src="assets/icon/rewind.png" alt="rewind" width="40px" height="40px"></button>
+
+		    			<button type="button" class="btn btn-sm m-1" (click)="onPlay()" id="playa"><img src="assets/icon/play.png" alt="play" width="50px" height="50px"></button>
+
+		    			<button type="button" (click)="onPause()" class="btn btn-sm m-1" *ngIf="displayPause"><img src="assets/icon/pause.png" alt="pause" width="50px" height="50px"></button>
+
+		    			<button type="button" (click)="onForward()" class="btn btn-sm m-1" id="forwarder" ><img src="assets/icon/forward.png" alt="forward" width="40px" height="40px"></button>
+		    			
+					</div>
+				</div>
+			</div>
+				
+	</div>
+</div>

@@ -1,0 +1,34 @@
+<div class="container-fluid text-dark w-100">
+	<div class="navbar navbar-expand-md border shadow p-2 mb-2 bg-white" style="background: #DDE9F7 !important;">
+		<a class="navbar-brand" routerLink="#">WMP</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cola">
+    			<span class="navbar-toggler-icon"></span>
+		</button>
+  		<div class="collapse navbar-collapse" id="cola">
+			<ul class="nav nav-pills">
+				<li class="nav-item">
+					<a class="nav-link" routerLink="/organize" routerLinkActive="active">Organize</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" routerLink="/stream" routerLinkActive="active">Stream</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" routerLink="/create_playlist" routerLinkActive="active">Create Playlist</a>
+				</li>
+			</ul>
+			<form class="navbar-form navbar-right">
+      			<div class="input-group">
+					<input class="form-control" id="myInput" type="text" placeholder="Search..">
+					<button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" style="background: #f4f4f4">
+      					<span class="caret"></span>
+   					</button>
+    				<div class="dropdown-menu">
+      					<a class="dropdown-item" href="#">How do I search?</a>
+    				</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+

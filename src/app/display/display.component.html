@@ -1,0 +1,20 @@
+<div class="container-fluid">
+	<table class="table table-hover">
+		<thead class="thead-dark">
+			<tr>
+				<th>Album</th>
+				<th>Title</th>
+				<th>Length</th>
+				<th>Rating</th>
+			</tr>
+		</thead>
+		<tbody *ngFor="let song of songs" class="tbody-dark">
+			<tr>
+				<td><a [routerLink] ="['/songs, songs.album']">{{song.album}}</a></td>
+				<td><a [routerLink] ="['/songs, songs.title']">{{song.title}}</a></td>
+				<td><a [routerLink] ="['/songs, songs.length']">{{song.length}}</a></td>
+				<td><a [routerLink] ="['/songs, songs.rating']">{{song.rating}}</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
